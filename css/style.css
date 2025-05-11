@@ -1,0 +1,534 @@
+/* global reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* global-reset */
+:root {
+  --mainColor: #343434;
+  --textColor-Paragraph: #748182;
+  --bg-sections: #f0f0f0;
+  --bg-footer-card: #5b5b5b;
+  --secondary-font: "Poppins", sans-serif;
+  --main-font: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* fonts */
+body {
+  font-family: var(--secondary-font);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+}
+/* global heading for all sections */
+.section-header h2 {
+  position: relative;
+
+  width: fit-content;
+  margin: auto;
+}
+
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+
+  height: 3px;
+  background-image: url("../imgs/dots.png");
+}
+
+/* Navbar Styles */
+.navbar {
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.navbar .nav-link {
+  position: relative;
+  padding: 0.5rem !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* تعديل مظهر الاكتيف  */
+.nav-link.active {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* navbar-color for other sections */
+
+.navbar.scrolled {
+  background-color: white !important;
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+  color: black !important;
+}
+.navbar.scrolled .nav-link::after {
+  background: #000 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  transition: color 0.3s ease;
+}
+
+/* home css */
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(../imgs/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+/*
+
+keyFrames */
+
+.typewriter::after {
+  content: "";
+  animation: type 6s linear forwards infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  font-size: 2.625rem;
+  color: #fff;
+  width: 0ch;
+}
+
+@keyframes type {
+  /* wtite */
+  0% {
+    content: "";
+    width: 0ch;
+  }
+  2% {
+    content: "L";
+    width: 1ch;
+  }
+  4% {
+    content: "La";
+    width: 2ch;
+  }
+  6% {
+    content: "Lar";
+    width: 3ch;
+  }
+  8% {
+    content: "Larr";
+    width: 4ch;
+  }
+  10% {
+    content: "Larry";
+    width: 5ch;
+  }
+  12% {
+    content: "Larry ";
+    width: 6ch;
+  }
+  14% {
+    content: "Larry D";
+    width: 7ch;
+  }
+  16% {
+    content: "Larry Da";
+    width: 8ch;
+  }
+  18% {
+    content: "Larry Dan";
+    width: 9ch;
+  }
+  20% {
+    content: "Larry Dani";
+    width: 10ch;
+  }
+  22% {
+    content: "Larry Danie";
+    width: 11ch;
+  }
+  24% {
+    content: "Larry Daniel";
+    width: 12ch;
+  }
+  26% {
+    content: "Larry Daniels";
+    width: 13ch;
+  }
+
+  /* stop */
+  30% {
+    content: "Larry Daniels";
+    width: 13ch;
+  }
+
+  /* delete*/
+  32% {
+    content: "Larry Daniel";
+    width: 12ch;
+  }
+  34% {
+    content: "Larry Danie";
+    width: 11ch;
+  }
+  36% {
+    content: "Larry Dani";
+    width: 10ch;
+  }
+  38% {
+    content: "Larry Dan";
+    width: 9ch;
+  }
+  40% {
+    content: "Larry Da";
+    width: 8ch;
+  }
+  42% {
+    content: "Larry D";
+    width: 7ch;
+  }
+  44% {
+    content: "Larry ";
+    width: 6ch;
+  }
+  46% {
+    content: "Larry";
+    width: 5ch;
+  }
+  48% {
+    content: "Larr";
+    width: 4ch;
+  }
+  50% {
+    content: "Lar";
+    width: 3ch;
+  }
+  52% {
+    content: "La";
+    width: 2ch;
+  }
+  54% {
+    content: "L";
+    width: 1ch;
+  }
+  56% {
+    content: "";
+    width: 0ch;
+  }
+
+  /* delay*/
+  58% {
+    content: "";
+    width: 0ch;
+  }
+
+  /*write */
+  60% {
+    content: "D";
+    width: 1ch;
+  }
+  62% {
+    content: "De";
+    width: 2ch;
+  }
+  64% {
+    content: "Des";
+    width: 3ch;
+  }
+  66% {
+    content: "Desi";
+    width: 4ch;
+  }
+  68% {
+    content: "Desig";
+    width: 5ch;
+  }
+  70% {
+    content: "Design";
+    width: 6ch;
+  }
+  72% {
+    content: "Designe";
+    width: 7ch;
+  }
+  74% {
+    content: "Designer";
+    width: 8ch;
+  }
+
+  /* stop */
+  78% {
+    content: "Designer";
+    width: 8ch;
+  }
+
+  /* delete */
+  80% {
+    content: "Designe";
+    width: 7ch;
+  }
+  82% {
+    content: "Design";
+    width: 6ch;
+  }
+  84% {
+    content: "Desig";
+    width: 5ch;
+  }
+  86% {
+    content: "Desi";
+    width: 4ch;
+  }
+  88% {
+    content: "Des";
+    width: 3ch;
+  }
+  90% {
+    content: "De";
+    width: 2ch;
+  }
+  92% {
+    content: "D";
+    width: 1ch;
+  }
+  94% {
+    content: "";
+    width: 0ch;
+  }
+
+  /* deley befor replay 6% تاخيرقبل الاعادة*/
+  100% {
+    content: "";
+    width: 0ch;
+  }
+}
+/* about */
+.hero-img {
+  overflow: hidden;
+}
+
+.doted {
+  bottom: 10px;
+  left: -23px;
+
+  opacity: 1;
+  width: 10%;
+  height: 90%;
+
+  background-image: url("../imgs/dots.png");
+}
+/* progress */
+
+.myprogress-bar1 {
+  width: 0%;
+  animation: Width 2s ease forwards;
+}
+
+@keyframes Width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+.myprogress-bar2 {
+  width: 0%;
+  animation: Width 2s ease forwards;
+}
+
+@keyframes Width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+.myprogress-bar3 {
+  width: 0%;
+  animation: Width 2s ease forwards;
+}
+
+@keyframes Width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+.btn-dark:hover {
+  background-color: transparent !important;
+  color: #212529 !important;
+  border: 1px solid #212529 !important;
+}
+
+/* services */
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-services:hover .icon-wrapper {
+  background-color: #000 !important;
+}
+.card-services:hover .icon-wrapper i {
+  color: #fff !important;
+}
+.icon-wrapper,
+.icon-wrapper i,
+.icon-link,
+.icon-link i {
+  transition: 0.5s;
+}
+
+/* portfolio */
+.icon-link {
+  background: #000 !important;
+}
+.card-portfolio .layer {
+  transition: 0.4s;
+}
+.card-portfolio:hover .layer {
+  opacity: 0.8 !important;
+  gap: 16px !important;
+}
+.icon-link:hover {
+  background: #fff !important;
+  border: 0.5px solid #000 !important;
+}
+.icon-link:hover i {
+  color: #000 !important;
+}
+
+.filter-btn,
+.nav-link.active {
+  position: relative;
+  color: black !important;
+}
+
+.nav-link#all::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #000;
+}
+.nav-link#all.active::after {
+  width: 100%;
+}
+
+/* باقي الأزرار: يظهر الخط فقط عند التفعيل */
+.filter-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* testemonials */
+.mybtn,
+.carousel-indicators [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  background-color: #666464;
+}
+
+/* our team */
+.team-overlay {
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  transition: opacity 0.3s 0.1s ease, transform 0.6s ease;
+}
+
+.our-team .card:hover .team-overlay {
+  opacity: 0.9 !important;
+  transform: rotateY(180deg);
+}
+
+.team-img {
+  transition: scale 0.3s;
+}
+.our-team .card:hover .team-img {
+  scale: 1.1;
+}
+/* contact */
+.contact .item:hover i {
+  color: #fff;
+}
+.contact .item:hover span {
+  background: #000 !important;
+}
+.contact .item span,
+i {
+  transition: 0.3s;
+}
+
+/* splash*/
+
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  animation: Splash-Screen 1s ease forwards;
+}
+
+@keyframes Splash-Screen {
+  0% {
+    clip-path: inset(50% 0 50% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
